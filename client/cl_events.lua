@@ -51,7 +51,7 @@ local function VehicleTheft(vehicle)
     local heading = getCardinalDirectionFromHeading()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "vehicletheft", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-35",
+        dispatchCode = "10-73",
         firstStreet = locationInfo,
         model = vehdata.name, -- vehicle name
         plate = vehdata.plate, -- vehicle plate
@@ -90,7 +90,7 @@ local function VehicleShooting(vehdata)
     if doorCount == 2 then doorCount = "Two-Door" elseif doorCount == 3 then doorCount = "Three-Door" elseif doorCount == 4 then doorCount = "Four-Door" else doorCount = "UNKNOWN" end
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "vehicleshots", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-60",
+        dispatchCode = "10-13",
         firstStreet = locationInfo,
         model = vehdata.name,
         plate = vehdata.plate,
@@ -125,7 +125,7 @@ local function Shooting()
 
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "shooting", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-11",
+        dispatchCode = "10-13",
         firstStreet = locationInfo,
         gender = gender,
         weapon = weapon,
@@ -154,7 +154,7 @@ local function SpeedingVehicle(vehdata)
     local heading = getCardinalDirectionFromHeading()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "speeding", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-11",
+        dispatchCode = "10-49",
         firstStreet = locationInfo,
         model = vehdata.name,
         plate = vehdata.plate,
@@ -180,7 +180,7 @@ local function Fight()
     local gender = GetPedGender()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "fight", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-10",
+        dispatchCode = "10-74",
         firstStreet = locationInfo,
         gender = gender,
         model = nil,
@@ -206,7 +206,7 @@ local function InjuriedPerson()
     local gender = GetPedGender()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "civdown", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-69",
+        dispatchCode = "10-82",
         firstStreet = locationInfo,
         gender = gender,
         model = nil,
@@ -232,7 +232,7 @@ local function DeceasedPerson()
     local gender = GetPedGender()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "civdead", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-69",
+        dispatchCode = "10-82",
         firstStreet = locationInfo,
         gender = gender,
         model = nil,
@@ -258,7 +258,7 @@ local function StoreRobbery(camId)
     local gender = GetPedGender()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "storerobbery", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-90",
+        dispatchCode = "10-17",
         firstStreet = locationInfo,
         gender = gender,
         camId = camId,
@@ -285,7 +285,7 @@ local function FleecaBankRobbery(camId)
     local gender = GetPedGender()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "bankrobbery", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-90",
+        dispatchCode = "10-17",
         firstStreet = locationInfo,
         gender = gender,
         camId = camId,
@@ -312,7 +312,7 @@ local function PaletoBankRobbery(camId)
     local gender = GetPedGender()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "paletobankrobbery", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-90",
+        dispatchCode = "10-17",
         firstStreet = locationInfo,
         gender = gender,
         camId = camId,
@@ -339,7 +339,7 @@ local function PacificBankRobbery(camId)
     local gender = GetPedGender()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "pacificbankrobbery", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-90",
+        dispatchCode = "10-17",
         firstStreet = locationInfo,
         gender = gender,
         camId = camId,
@@ -366,7 +366,7 @@ local function PrisonBreak()
     local gender = GetPedGender()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "prisonbreak", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-90",
+        dispatchCode = "10-17",
         firstStreet = locationInfo,
         gender = gender,
         model = nil,
@@ -393,7 +393,7 @@ local function VangelicoRobbery(camId)
     PlaySound(-1, "Lose_1st", "GTAO_FM_Events_Soundset", 0, 0, 1)
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "vangelicorobbery", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-90",
+        dispatchCode = "10-17",
         firstStreet = locationInfo,
         gender = gender,
         camId = camId,
@@ -420,7 +420,7 @@ local function HouseRobbery()
     local gender = GetPedGender()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "houserobbery", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-90",
+        dispatchCode = "10-17",
         firstStreet = locationInfo,
         gender = gender,
         model = nil,
@@ -446,7 +446,7 @@ local function YachtHeist()
     local gender = GetPedGender()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "yachtheist", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-65",
+        dispatchCode = "10-17",
         firstStreet = locationInfo,
         gender = gender,
         model = nil,
@@ -472,7 +472,7 @@ local function DrugSale()
     local gender = GetPedGender()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "suspicioushandoff", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-13",
+        dispatchCode = "10-17",
         firstStreet = locationInfo,
         gender = gender,
         model = nil,
@@ -505,7 +505,7 @@ local function CarJacking(vehicle)
     local heading = getCardinalDirectionFromHeading()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "carjack", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-35",
+        dispatchCode = "10-73",
         firstStreet = locationInfo,
         model = vehdata.name, -- vehicle name
         plate = vehdata.plate, -- vehicle plate
@@ -595,7 +595,7 @@ local function Explosion()
     local gender = GetPedGender()
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "explosion", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-        dispatchCode = "10-80",
+        dispatchCode = "10-89",
         firstStreet = locationInfo,
         gender = nil,
         model = nil,
